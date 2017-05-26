@@ -32,14 +32,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/welcome"
                 android:layout_marginTop="-30dp"
-                       android:layout_marginStart="16dp"
+                android:layout_marginStart="16dp"
                 android:textSize="20sp"
                 android:textStyle="bold"/>
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-15dp"
+            android:layout_marginTop="-30dp"
             android:layout_marginStart="290dp"
             android:layout_weight="1"
             android:background="@color/colorLogoutBtn"
