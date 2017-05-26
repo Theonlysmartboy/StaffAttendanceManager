@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">StaffAttendanceManager</string>
+    <string name="staff_no">Staff Number</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+</resources>
