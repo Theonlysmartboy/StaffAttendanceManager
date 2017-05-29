@@ -1,5 +1,6 @@
 package com.otema.staffattendancemanager;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -52,5 +53,8 @@ switch (view.getId()){
 
     private void displayToast(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+        Intent login = new Intent(getApplicationContext(),Login.class);
+        startActivity(login);
+        finish();
     }
 }
