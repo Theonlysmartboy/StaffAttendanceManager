@@ -34,6 +34,7 @@ switch (view.getId()){
     case R.id.sign_up_button:
         Intent sign_up = new Intent(getApplicationContext(),Register.class);
         startActivity(sign_up);
+        finish();
         break;
     default:
 
