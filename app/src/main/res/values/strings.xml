@@ -5,6 +5,6 @@
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
     <string name="welcome">WELCOME</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">WELCOME</string>
     <string name="logout">Logout</string>
 </resources>

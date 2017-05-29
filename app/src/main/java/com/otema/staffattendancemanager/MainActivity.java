@@ -1,5 +1,6 @@
 package com.otema.staffattendancemanager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,15 +10,20 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
- Button logout;
+    private Button btnLogout;
+    private Session session;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        logout = (Button) findViewById(R.id.logout);
-        logout.setOnClickListener(this);
+        session = new Session(this);
+        if(!session.loggedin()){
+            logout();
+        }
+        btnLogout = (Button) findViewById(R.id.logout);
+        btnLogout.setOnClickListener(this);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -33,9 +39,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.logout:
-
+                logout();
                 break;
             default:
         }
+    }
+    private void logout(){
+        session.setLoggedin(false);
+        finish();
+        startActivity(new Intent(MainActivity.this,Login.class));
     }
 }
