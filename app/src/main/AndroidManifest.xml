@@ -22,7 +22,7 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme" />
         <activity android:name=".Profile" />
-        <activity android:name=".Attendance"></activity>
+        <activity android:name=".Attendance"/>
     </application>
 
 </manifest>
